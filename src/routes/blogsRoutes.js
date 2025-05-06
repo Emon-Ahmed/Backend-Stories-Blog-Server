@@ -12,7 +12,7 @@ import {
 const router = express.Router();
 
 router.get("/", getAllBlogs);
-router.get("/:id", protect, getBlog);
+router.get("/:id", getBlog);
 router.post("/", protect, upload.single("image"), createBlog);
 router.put("/:id", protect, updateBlog);
 router.delete("/:id", protect, deleteBlog);
